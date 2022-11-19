@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pytemplate"
+version = "1.0.0"
+description = "Python template project"
+authors = ["My Name <my_name@email.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.32.0"
+pre-commit = "^2.20.0"
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.yapf]
+based_on_style = "google"
+spaces_before_comment = 4
+split_before_logical_operator = true
+column_limit = 120
