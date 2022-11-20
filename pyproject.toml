@@ -12,6 +12,10 @@ python = "^3.10"
 yapf = "^0.32.0"
 pre-commit = "^2.20.0"
 toml = "^0.10.2"
+flake8 = "^5.0.4"
+# use flake8-pyproject to read flake8 config from pyproject.toml
+flake8-pyproject = "^1.2.0"
+pylint = "^2.15.6"
 
 [build-system]
 requires = ["poetry-core"]
@@ -22,3 +26,21 @@ based_on_style = "google"
 spaces_before_comment = 4
 split_before_logical_operator = true
 column_limit = 120
+
+# Includes Pyflakes(error linter), pycodestyle(style linter for pep8) and mccabe(complexity linter)
+[tool.flake8] # use flake8-pyproject to read flake8 config from pyproject.toml
+max-line-length = 120
+
+[tool.pylint]
+max-line-length = 120
+good-names = [
+    "i",
+    "j",
+    "k",
+    "v",
+    "_",
+    "x",
+    "y",
+    "z",
+    "r",
+] # pylint enforces snake_case and does not allows variables less than 3 characters
