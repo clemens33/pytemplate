@@ -56,5 +56,6 @@ repos:
     rev: 6.1.1
     hooks:
       - id: pydocstyle
+        additional_dependencies: [toml]
 # mypy
 # https://github.com/DanielNoord/pydocstringformatter # formats docstrings to follow the Google style.

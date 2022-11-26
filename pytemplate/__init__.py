@@ -11,11 +11,21 @@ def add(c: int, b: int) -> int:
     Returns:
         int: the added number
     """
+
     return c + b
 
 
 def sub(c: int, b: int) -> int:
-    """Sub function."""
+    """_summary_.
+
+    Args:
+        c (int): _description_
+        b (int): _description_
+
+    Returns:
+        int: _description_
+    """
+
     return c - b
 
 

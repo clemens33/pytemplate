@@ -58,3 +58,4 @@ warn_unused_configs = "True"
 
 [tool.pydocstyle]
 convention = "google"
+add-ignore = ["D202"]

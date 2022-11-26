@@ -1,10 +1,10 @@
 # python project template
 
-This is a template project for python based on poetry, pre-commit, pytest and many other tools.
+This is a lightweight template project for python based on poetry, pre-commit, pytest and many other tools. All tool configuration is done within [pyproject.toml](pyproject.toml) and [pre-commit-config.yaml](pre-commit-config.yaml).
 
 ## [poetry](https://python-poetry.org/)
 
-The following will create the virtual environment within the project directory in .../my-project/.venv. This allows vscode to find the virtual environment.
+The following will create the virtual environment within the project directory in .../my-project/.venv. This allows vscode natively to find the virtual environment.
 
 ```
 poetry config virtualenvs.in-project true

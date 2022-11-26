@@ -5,7 +5,7 @@
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
-    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pydocstyleEnabled": true,
     "files.autoSave": "afterDelay",
     "autoDocstring.docstringFormat": "google"
 }
