@@ -13,13 +13,19 @@ yapf = "^0.32.0"
 pre-commit = "^2.20.0"
 toml = "^0.10.2"
 flake8 = "^5.0.4"
-# use flake8-pyproject to read flake8 config from pyproject.toml
-flake8-pyproject = "^1.2.0"
+flake8-pyproject = "^1.2.0" # use flake8-pyproject to read flake8 config from pyproject.toml
 pylint = "^2.15.6"
+isort = "^5.10.1"
+mypy = "^0.991"
+pydocstyle = "^6.1.1"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "google"
+line_length = 120
 
 [tool.yapf]
 based_on_style = "google"
@@ -27,13 +33,15 @@ spaces_before_comment = 4
 split_before_logical_operator = true
 column_limit = 120
 
-# Includes Pyflakes(error linter), pycodestyle(style linter for pep8) and mccabe(complexity linter)
 [tool.flake8] # use flake8-pyproject to read flake8 config from pyproject.toml
 max-line-length = 120
 
 [tool.pylint]
 max-line-length = 120
 good-names = [
+    "a",
+    "b",
+    "c",
     "i",
     "j",
     "k",
@@ -44,3 +52,9 @@ good-names = [
     "z",
     "r",
 ] # pylint enforces snake_case and does not allows variables less than 3 characters
+
+[tool.mypy]
+warn_unused_configs = "True"
+
+[tool.pydocstyle]
+convention = "google"

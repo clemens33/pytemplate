@@ -1,45 +1,28 @@
-"""my test module"""
+"""My Module."""
 
 
-def my_function(**kwargs) -> int:
-    """asdfasdf
+def add(c: int, b: int) -> int:
+    """Add function.
+
+    Args:
+        c (int): first number
+        b (int): second number
 
     Returns:
-        int: asdf
+        int: the added number
     """
-    ret = 0
-
-    for _, val in kwargs.items():
-        ret += val
-
-    return ret
+    return c + b
 
 
-def my_bad_function() -> int:
-    """my bad function"""
-    aaa = 0
-    bbb = 2
-    ccc = 3
-
-    for i in range(10):
-        aaa += i
-        bbb += i
-        ccc += i
-
-    return aaa + bbb + ccc
-
-
-def func() -> str:
-    """a random function"""
-
-    return "hello world"
+def sub(c: int, b: int) -> int:
+    """Sub function."""
+    return c - b
 
 
 def main():
-    """main function"""
-    x = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10}
-
-    print(my_function(**x))
+    """Add and sub function."""
+    print(add(1, 2))
+    print(sub(1, 2))
 
 
 if __name__ == "__main__":

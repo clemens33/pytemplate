@@ -1,6 +1,6 @@
 # python project template
 
-This is a template project for python based on poetry, pre-commit, pytest and many other tools
+This is a template project for python based on poetry, pre-commit, pytest and many other tools.
 
 ## [poetry](https://python-poetry.org/)
 
@@ -25,3 +25,5 @@ pre-commit run --all-files
 ```
 
 ## [vscode](https://code.visualstudio.com/)
+
+TODO - recommended extensions

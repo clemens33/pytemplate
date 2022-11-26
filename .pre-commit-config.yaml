@@ -10,7 +10,6 @@ repos:
       - id: check-docstring-first # checks a common error of defining a docstring after code.
       - id: check-executables-have-shebangs # ensures that (non-binary) executables have a shebang.
       - id: check-json # checks json files for parseable syntax.
-      # - id: pretty-format-json # sets a standard for formatting json files.
       - id: check-merge-conflict # checks for files that contain merge conflict strings.
       - id: check-symlinks # checks for symlinks which do not point to anything.
       - id: check-toml # checks toml files for parseable syntax.
@@ -18,15 +17,10 @@ repos:
       - id: check-xml # checks xml files for parseable syntax.
       - id: check-yaml # checks yaml files for parseable syntax.
       - id: debug-statements # checks for debugger imports and py37+ `breakpoint()` calls in python source.
-      # - id: detect-aws-credentials # detects *your* aws credentials from the aws cli credentials file.
-      - id: detect-private-key # detects the presence of private keys.
-      # - id: double-quote-string-fixer # replaces double quoted strings with single quoted strings.
       - id: end-of-file-fixer # ensures that a file is either empty, or ends with one newline.
       - id: file-contents-sorter # sorts the lines in specified files (defaults to alphabetical). you must provide list of target files as input in your .pre-commit-config.yaml file.
-      # - id: fix-encoding-pragma # add # -*- coding: utf-8 -*- to the top of python files.
       - id: mixed-line-ending # replaces or checks mixed line ending.
       - id: name-tests-test # verifies that test files are named correctly.
-      # - id: no-commit-to-branch # don't commit to branch
       - id: sort-simple-yaml # sorts simple yaml files which consist only of top-level keys, preserving comments and blocks.
       - id: trailing-whitespace # trims trailing whitespace.
 
@@ -46,7 +40,21 @@ repos:
     rev: v2.15.6
     hooks:
       - id: pylint
-# TODO
-# isort
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort (python)
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.991
+    hooks:
+      - id: mypy
+
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: 6.1.1
+    hooks:
+      - id: pydocstyle
 # mypy
 # https://github.com/DanielNoord/pydocstringformatter # formats docstrings to follow the Google style.
