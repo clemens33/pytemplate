@@ -10,11 +10,11 @@ The following will create the virtual environment within the project directory i
 poetry config virtualenvs.in-project true
 ```
 
+Installs all dependencies (if virtualenvs.in-project is set to true) to [.venv](.venv) within this repository location and creates a [pyproject.lock](pyproject.lock) file.
+
 ```
 poetry install
 ```
-
-
 
 ## [pre-commit](https://pre-commit.com/)
 
