@@ -20,15 +20,13 @@ repos:
       - id: end-of-file-fixer # ensures that a file is either empty, or ends with one newline.
       - id: file-contents-sorter # sorts the lines in specified files (defaults to alphabetical). you must provide list of target files as input in your .pre-commit-config.yaml file.
       - id: mixed-line-ending # replaces or checks mixed line ending.
-      - id: name-tests-test # verifies that test files are named correctly.
       - id: sort-simple-yaml # sorts simple yaml files which consist only of top-level keys, preserving comments and blocks.
       - id: trailing-whitespace # trims trailing whitespace.
 
-  - repo: https://github.com/pre-commit/mirrors-yapf
-    rev: v0.32.0
+  - repo: https://github.com/psf/black
+    rev: 22.6.0
     hooks:
-      - id: yapf
-        additional_dependencies: [toml]
+      - id: black
 
   - repo: https://github.com/pycqa/flake8
     rev: 5.0.4
@@ -57,5 +55,3 @@ repos:
     hooks:
       - id: pydocstyle
         additional_dependencies: [toml]
-# mypy
-# https://github.com/DanielNoord/pydocstringformatter # formats docstrings to follow the Google style.

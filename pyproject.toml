@@ -1,57 +1,57 @@
 [tool.poetry]
 name = "pytemplate"
 version = "1.0.0"
-description = "Python template project"
-authors = ["My Name <my_name@email.com>"]
+description = "<project description>"
+authors = ["<author name> <author@email.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-yapf = "^0.32.0"
-pre-commit = "^2.20.0"
 toml = "^0.10.2"
-flake8 = "^5.0.4"
-flake8-pyproject = "^1.2.0" # use flake8-pyproject to read flake8 config from pyproject.toml
 pylint = "^2.15.6"
 isort = "^5.10.1"
 mypy = "^0.991"
 pydocstyle = "^6.1.1"
+pytest = "^7.2.0"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+flake8-pyproject = "^1.2.2"
+pre-commit = "^2.20.0"
+pytest-cov = "^4.0.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+markers = [
+    "integration: mark test as integration test",
+    "unit: mark test as unit test",
+]
+
 [tool.isort]
 profile = "google"
 line_length = 120
 
-[tool.yapf]
-based_on_style = "google"
-spaces_before_comment = 4
-split_before_logical_operator = true
-column_limit = 120
+[tool.black]
+line-length = 120
 
 [tool.flake8] # use flake8-pyproject to read flake8 config from pyproject.toml
 max-line-length = 120
 
 [tool.pylint]
 max-line-length = 120
-good-names = [
-    "a",
-    "b",
-    "c",
-    "i",
-    "j",
-    "k",
-    "v",
-    "_",
-    "x",
-    "y",
-    "z",
-    "r",
-] # pylint enforces snake_case and does not allows variables less than 3 characters
+# pylint enforces snake_case and does not allows variables less than 3 characters
+good-names-rgx = ["^[_a-z][_a-z0-9]?$"]
+disable = [
+    "redefined-outer-name",
+    "import-error",
+    "redefined-argument-from-local",
+]
 
 [tool.mypy]
 warn_unused_configs = "True"
