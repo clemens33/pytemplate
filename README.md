@@ -64,4 +64,5 @@ code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
 code --install-extension njpwerner.autodocstring
 code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension ms-python.isort
 ```

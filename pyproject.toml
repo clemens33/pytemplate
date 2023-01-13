@@ -34,7 +34,7 @@ markers = [
 ]
 
 [tool.isort]
-profile = "google"
+profile = "black"
 line_length = 120
 
 [tool.black]
@@ -47,11 +47,6 @@ max-line-length = 120
 max-line-length = 120
 # pylint enforces snake_case and does not allows variables less than 3 characters
 good-names-rgx = ["^[_a-z][_a-z0-9]?$"]
-disable = [
-    "redefined-outer-name",
-    "import-error",
-    "redefined-argument-from-local",
-]
 
 [tool.mypy]
 warn_unused_configs = "True"
